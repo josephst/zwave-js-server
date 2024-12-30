@@ -96,7 +96,7 @@ class WebSocketLogTransport extends Transport {
           client.sendEvent({
             source: "driver",
             event: "logging",
-            formattedMessage: info[this.messageSymbol as any],
+            formattedMessage: info[this.messageSymbol as any] as string,
             ...info,
           }),
         );
